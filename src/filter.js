@@ -1,3 +1,4 @@
+// src/filter.js
 const INCLUDE_KEYWORDS = ["react", "node", "typescript", "postgres", "ai", "full-stack"];
 const EXCLUDE_KEYWORDS = ["senior", "director", "principal", "phd", "10+ years"];
 
