@@ -1,3 +1,4 @@
+// src/index.js
 const { scrapeIndeedJobs } = require("./scraper");
 const { filterJobsLocally } = require("./filter");
 const { evaluateFit } = require("./gemini");
@@ -14,12 +15,12 @@ const { saveJobs } = require("./utils");
   const results = [];
   const limit = 5; // limit Gemini calls
 
-  for (let i = 0; i < Math.min(limit, filtered.length); i++) {
-    const job = filtered[i];
-    const fitResult = await evaluateFit(job);
-    results.push({ ...job, ...fitResult });
-    console.log(`🤖 ${job.title} => ${fitResult.fit}`);
-  }
+  // for (let i = 0; i < Math.min(limit, filtered.length); i++) {
+  //   const job = filtered[i];
+  //   const fitResult = await evaluateFit(job);
+  //   results.push({ ...job, ...fitResult });
+  //   console.log(`🤖 ${job.title} => ${fitResult.fit}`);
+  // }
 
   saveJobs(results);
 })();
